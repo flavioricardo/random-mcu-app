@@ -10,7 +10,8 @@ const elements = {
   year: document.getElementById('movieYear'),
   cast: document.getElementById('movieCast'),
   imdb: document.getElementById('movieImdb'),
-  synopsis: document.getElementById('movieSynopsis')
+  synopsis: document.getElementById('movieSynopsis'),
+  trailer: document.getElementById('movieTrailer')
 };
 
 let isFlipped = false;
@@ -31,6 +32,7 @@ const updateMovieCard = (data) => {
   updateElement(elements.cast, 'Cast', data.cast);
   updateElement(elements.imdb, 'IMDB', `⭐ ${data.imdb_rating}`);
   updateElement(elements.synopsis, 'Synopsis', data.synopsis);
+  elements.trailer.href = data.link;
 };
 
 const handleError = (error) => {
