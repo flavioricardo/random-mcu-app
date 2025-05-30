@@ -32,7 +32,7 @@ const updateMovieCard = (data) => {
   updateElement(elements.cast, 'Cast', data.cast);
   updateElement(elements.imdb, 'IMDB', `⭐ ${data.imdb_rating}`);
   updateElement(elements.synopsis, 'Synopsis', data.synopsis);
-  elements.trailer.href = data.link;
+  elements.trailer.href = data.permalink;
 };
 
 const handleError = (error) => {
